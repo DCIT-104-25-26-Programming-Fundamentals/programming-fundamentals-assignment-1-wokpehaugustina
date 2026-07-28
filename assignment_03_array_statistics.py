@@ -39,3 +39,54 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+
+
+numbers = [4,7,2,9,1]
+n = int(input("How many numbers? "))
+if n < 0:
+    print("Error: Number of values must be greater 0.")
+numbers = []
+for i in range(n):
+    number = float(input(f"Enter number {i + 1}: "))
+    numbers.append(number)
+
+def calculateSum(numbers):
+    total = 0
+
+    for number in numbers:
+        total += number
+    return total
+
+def calculateAverage(numbers):
+    total = calculateSum(numbers)
+    return total / len(numbers)
+
+def findMax(numbers):
+    largest = numbers[0]
+
+    for number in numbers:
+        if number > largest:
+            largest = number
+
+    return largest
+
+
+def findMin(numbers):
+    smallest = numbers[0]
+
+    for number in numbers:
+        if number < smallest:
+            smallest = number
+
+    return smallest
+
+print("\nResults:")
+print("Sum:", calculateSum(numbers))
+print("Average:", calculateAverage(numbers))
+print("Maximum:", findMax(numbers))
+print("Minimum:", findMin(numbers))
+
+
+
+
+
